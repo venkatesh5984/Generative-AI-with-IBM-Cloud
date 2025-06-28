@@ -1,0 +1,19 @@
+frontend/app.py
+
+
+import streamlit as st
+import requests
+
+st.title("EduTutor AI - Student Panel")
+
+topic = st.text_input("Enter Topic:")
+difficulty = st.selectbox("Select Difficulty", ["easy", "medium", "hard"])
+
+if st.button("Generate Quiz"):
+    response = requests.post("http://localhost:8000/generate-quiz/", json={
+        "topic": topic,
+        "difficulty": difficulty
+    })
+    quiz = response.json()["quiz"]
+    st.write("### Quiz Generated")
+    st.write(quiz)
