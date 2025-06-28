@@ -17,3 +17,10 @@ async def get_quiz(request: Request):
     difficulty = body.get("difficulty")
     quiz = generate_quiz(topic, difficulty)
     return {"quiz": quiz}
+
+
+
+
+Run backend:
+       uvicorn backend.main:app --reload
+
