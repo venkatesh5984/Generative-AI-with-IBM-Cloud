@@ -17,3 +17,9 @@ if st.button("Generate Quiz"):
     quiz = response.json()["quiz"]
     st.write("### Quiz Generated")
     st.write(quiz)
+
+
+
+Run frontend:
+    streamlit run frontend/app.py
+
