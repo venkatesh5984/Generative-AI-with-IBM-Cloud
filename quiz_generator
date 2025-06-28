@@ -1,0 +1,20 @@
+backend/quiz_generator.py
+
+
+from langchain_ibm import WatsonxLLM
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+watsonx_model = WatsonxLLM(
+    model_id=os.getenv("WATSONX_MODEL_ID"),
+    api_key=os.getenv("WATSONX_API_KEY"),
+    project_id=os.getenv("WATSONX_PROJECT_ID"),
+    url=os.getenv("WATSONX_ENDPOINT"),
+)
+
+def generate_quiz(topic: str, difficulty: str):
+    prompt = f"Create 3 MCQs on the topic '{topic}' with {difficulty} difficulty."
+    result = watsonx_model(prompt)
+    return result
