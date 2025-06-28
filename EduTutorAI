@@ -1,0 +1,13 @@
+EduTutorAI/
+│
+├── backend/
+│   ├── main.py           # FastAPI backend
+│   ├── quiz_generator.py # Quiz logic using Watsonx
+│   ├── utils.py          # Helper functions
+│
+├── frontend/
+│   ├── app.py            # Streamlit app
+│
+├── .env                  # Environment variables
+├── requirements.txt      # Python libraries
+├── README.md             # Project description
