@@ -1,0 +1,13 @@
+Understand the Project in Simple Words
+
+
+#Goal: You are building an AI-based quiz app where:
+
+Students log in using Google Classroom.
+
+The system generates MCQ quizzes using IBM Watsonx AI (Granite LLM).
+
+Teachers can track students’ scores using a dashboard.
+
+Everything runs on Python (FastAPI + Streamlit).
+
